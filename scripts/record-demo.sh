@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Save portfolio demo transcript to demo/netops-demo.txt
+# Save demo transcript to demo/netops-demo.txt
 set -euo pipefail
 cd "$(dirname "$0")/.."
 mkdir -p demo

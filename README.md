@@ -6,7 +6,7 @@ anomalies, and takes **guarded closed-loop action**. Built with **MCP tools**
 and a **LangGraph** control loop — the same perceive → reason → act pattern
 used in carrier OSS, at lab scale.
 
-> **Status:** Phases 0–4 complete. Portfolio-ready.
+> **Status:** Phases 0–4 complete.
 
 ## What it does
 
@@ -78,7 +78,7 @@ uv run netops-agent --act --approve
 # 6. Grade against scripted scenarios
 uv run netops-eval
 
-# 7. Portfolio demo transcript (~70s)
+# 7. Record a demo transcript (~70s)
 chmod +x scripts/demo.sh scripts/record-demo.sh
 ./scripts/record-demo.sh
 ```
@@ -191,8 +191,8 @@ See `evals/rubric.md` for grading criteria.
 ./scripts/record-demo.sh    # → demo/netops-demo.txt (gitignored)
 ```
 
-Use the transcript as a script for a screen recording, or paste excerpts into
-your portfolio — **redact any LAN-specific output first**.
+Use the transcript as a script for a screen recording — **redact any LAN-specific
+output first**.
 
 ## Project layout
 
@@ -205,15 +205,6 @@ evals/              scenarios/ + run_evals.py grader
 scripts/            demo.sh, record-demo.sh
 var/                Action logs (gitignored, created at runtime)
 ```
-
-## Interview framing
-
-One-liner: *"A miniature autonomous-networks agent that monitors performance and
-security on a home LAN via MCP tools and a LangGraph closed-loop."*
-
-Talking points: closed-loop assurance, intent-based remediation, MCP as an OSS
-abstraction, typed incident outputs (Pydantic), measured evals not vibes,
-guardrails on destructive actions.
 
 Built with Cursor + Claude.
 

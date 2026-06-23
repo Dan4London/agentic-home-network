@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Portfolio demo (~70s). Record with: ./scripts/record-demo.sh
+# Demo walkthrough (~70s). Record with: ./scripts/record-demo.sh
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
