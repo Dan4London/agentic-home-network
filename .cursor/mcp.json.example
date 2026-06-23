@@ -1,0 +1,30 @@
+{
+  "mcpServers": {
+    "netops-perf-probe": {
+      "command": "${workspaceFolder}/.venv/bin/python",
+      "args": ["${workspaceFolder}/mcp_servers/perf_probe.py"],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "USE_MOCK_PROBES": "true",
+        "DRY_RUN": "true"
+      }
+    },
+    "netops-device-inventory": {
+      "command": "${workspaceFolder}/.venv/bin/python",
+      "args": ["${workspaceFolder}/mcp_servers/device_inventory.py"],
+      "cwd": "${workspaceFolder}"
+    },
+    "netops-actuator": {
+      "command": "${workspaceFolder}/.venv/bin/python",
+      "args": ["${workspaceFolder}/mcp_servers/actuator.py"],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "DRY_RUN": "true"
+      }
+    },
+    "netops-flow-monitor": {
+      "command": "${workspaceFolder}/.venv/bin/python",
+      "args": ["${workspaceFolder}/mcp_servers/flow_monitor.py"]
+    }
+  }
+}

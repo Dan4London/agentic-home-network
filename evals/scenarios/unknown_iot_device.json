@@ -1,0 +1,22 @@
+{
+  "name": "unknown_iot_device",
+  "description": "Unidentified IoT device joins LAN",
+  "input": {
+    "latency_results": [],
+    "unknown_devices": [
+      {
+        "ip": "192.168.1.53",
+        "mac": "70:ee:50:73:ae:28",
+        "hostname": "Netatmo.localdomain",
+        "vendor": "Netatmo",
+        "device_type": "iot"
+      }
+    ]
+  },
+  "expected": {
+    "security_status": "alert",
+    "incident_count": 1,
+    "categories": ["security"],
+    "root_cause_contains": ["baseline"]
+  }
+}

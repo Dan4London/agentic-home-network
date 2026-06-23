@@ -1,0 +1,14 @@
+{
+  "name": "wan_packet_loss",
+  "description": "Partial WAN packet loss",
+  "input": {
+    "latency_results": [
+      {"target": "8.8.8.8", "packets_sent": 3, "packets_received": 2, "packet_loss_pct": 33, "rtt_avg_ms": 40.0}
+    ]
+  },
+  "expected": {
+    "overall_health": "degraded",
+    "incident_count": 1,
+    "categories": ["performance"]
+  }
+}

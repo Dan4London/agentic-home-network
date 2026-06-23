@@ -1,0 +1,19 @@
+{
+  "name": "multiple_unknown_devices",
+  "description": "Several unknown MACs on LAN",
+  "input": {
+    "latency_results": [
+      {"target": "192.168.1.1", "packets_sent": 3, "packets_received": 3, "packet_loss_pct": 0, "rtt_avg_ms": 0.4}
+    ],
+    "unknown_devices": [
+      {"ip": "192.168.1.12", "mac": "fa:02:d4:66:3f:6e", "hostname": "Mac.localdomain"},
+      {"ip": "192.168.1.99", "mac": "aa:bb:cc:dd:ee:ff"}
+    ]
+  },
+  "expected": {
+    "security_status": "alert",
+    "incident_count": 2,
+    "categories": ["security"],
+    "unknown_count": 2
+  }
+}

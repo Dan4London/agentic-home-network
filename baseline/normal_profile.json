@@ -1,0 +1,7 @@
+{
+  "latency_ms": {
+    "gateway": {"p50": 1.0, "p95": 5.0},
+    "wan": {"p50": 8.0, "p95": 30.0}
+  },
+  "packet_loss_pct_max": 1.0
+}

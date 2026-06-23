@@ -1,0 +1,16 @@
+{
+  "name": "wan_degraded_latency",
+  "description": "WAN path high RTT but no loss",
+  "input": {
+    "latency_results": [
+      {"target": "192.168.1.1", "packets_sent": 3, "packets_received": 3, "packet_loss_pct": 0, "rtt_avg_ms": 1.0},
+      {"target": "1.1.1.1", "packets_sent": 3, "packets_received": 3, "packet_loss_pct": 0, "rtt_avg_ms": 85.0}
+    ]
+  },
+  "expected": {
+    "overall_health": "degraded",
+    "incident_count": 1,
+    "categories": ["performance"],
+    "severities": ["warning"]
+  }
+}

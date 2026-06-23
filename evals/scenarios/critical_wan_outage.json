@@ -1,0 +1,16 @@
+{
+  "name": "critical_wan_outage",
+  "description": "All external targets unreachable",
+  "input": {
+    "latency_results": [
+      {"target": "192.168.1.1", "packets_sent": 3, "packets_received": 3, "packet_loss_pct": 0, "rtt_avg_ms": 0.2},
+      {"target": "1.1.1.1", "packets_sent": 3, "packets_received": 0, "packet_loss_pct": 100},
+      {"target": "8.8.8.8", "packets_sent": 3, "packets_received": 0, "packet_loss_pct": 100}
+    ]
+  },
+  "expected": {
+    "overall_health": "down",
+    "min_incident_count": 2,
+    "severities": ["critical"]
+  }
+}

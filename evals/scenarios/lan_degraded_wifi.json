@@ -1,0 +1,14 @@
+{
+  "name": "lan_degraded_wifi",
+  "description": "High latency to gateway suggests local Wi-Fi issue",
+  "input": {
+    "latency_results": [
+      {"target": "192.168.1.1", "packets_sent": 3, "packets_received": 3, "packet_loss_pct": 0, "rtt_avg_ms": 120.0}
+    ]
+  },
+  "expected": {
+    "overall_health": "degraded",
+    "incident_count": 1,
+    "root_cause_contains": ["lan"]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "perf_and_security_combined",
+  "description": "WAN down plus unknown device",
+  "input": {
+    "latency_results": [
+      {"target": "1.1.1.1", "packets_sent": 3, "packets_received": 0, "packet_loss_pct": 100},
+      {"target": "192.168.1.1", "packets_sent": 3, "packets_received": 3, "packet_loss_pct": 0, "rtt_avg_ms": 0.5}
+    ],
+    "unknown_devices": [
+      {"ip": "192.168.1.12", "mac": "fa:02:d4:66:3f:6e", "hostname": "Mac.localdomain", "device_type": "laptop"}
+    ]
+  },
+  "expected": {
+    "overall_health": "down",
+    "security_status": "alert",
+    "min_incident_count": 2,
+    "categories": ["performance", "security"]
+  }
+}

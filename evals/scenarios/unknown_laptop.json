@@ -1,0 +1,27 @@
+{
+  "name": "unknown_laptop",
+  "description": "New Mac laptop not in baseline",
+  "input": {
+    "latency_results": [
+      {"target": "192.168.1.1", "packets_sent": 3, "packets_received": 3, "packet_loss_pct": 0, "rtt_avg_ms": 0.5}
+    ],
+    "unknown_devices": [
+      {
+        "ip": "192.168.1.12",
+        "mac": "fa:02:d4:66:3f:6e",
+        "hostname": "Mac.localdomain",
+        "device_type": "laptop",
+        "confidence": "medium"
+      }
+    ]
+  },
+  "expected": {
+    "overall_health": "healthy",
+    "security_status": "alert",
+    "incident_count": 1,
+    "categories": ["security"],
+    "severities": ["warning"],
+    "unknown_count": 1,
+    "action_types": ["notify"]
+  }
+}

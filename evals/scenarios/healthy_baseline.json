@@ -1,0 +1,16 @@
+{
+  "name": "healthy_baseline",
+  "description": "All targets respond normally",
+  "input": {
+    "latency_results": [
+      {"target": "192.168.1.1", "packets_sent": 3, "packets_received": 3, "packet_loss_pct": 0, "rtt_avg_ms": 0.5},
+      {"target": "1.1.1.1", "packets_sent": 3, "packets_received": 3, "packet_loss_pct": 0, "rtt_avg_ms": 6.0}
+    ],
+    "unknown_devices": []
+  },
+  "expected": {
+    "overall_health": "healthy",
+    "security_status": "clear",
+    "incident_count": 0
+  }
+}

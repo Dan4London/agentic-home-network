@@ -1,0 +1,24 @@
+# Known devices on your LAN (MAC allow-list)
+# Copy to known_devices.yaml — do not commit the populated file.
+#
+# Generate locally:
+#   uv run netops-discover --write-baseline
+#
+# Redact MACs, IPs, and hostnames before sharing screenshots.
+
+generated_by: manual
+devices:
+  - name: gateway
+    mac: "aa:bb:cc:dd:ee:01"
+    ip: "192.168.1.1"
+    hostname: gateway.local
+    vendor: Example Vendor
+    type: router
+    confidence: high
+  - name: probe-pi
+    mac: "aa:bb:cc:dd:ee:02"
+    ip: "192.168.1.100"
+    hostname: probe.local
+    vendor: Raspberry Pi Foundation
+    type: probe
+    confidence: high

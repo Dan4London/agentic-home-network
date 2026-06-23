@@ -1,0 +1,30 @@
+[project]
+name = "agentic-home-netops"
+version = "0.1.0"
+description = "Autonomous home-network monitoring agent (MCP + LangGraph)"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.11"
+dependencies = [
+    "langgraph>=0.3.0",
+    "langchain-anthropic>=0.3.0",
+    "langchain-mcp-adapters>=0.1.0",
+    "mcp>=1.6.0",
+    "pydantic>=2.0",
+    "pydantic-settings>=2.0",
+    "python-dotenv>=1.0",
+    "paramiko>=3.0",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+netops-agent = "agent.run:main"
+netops-discover = "probes.discover_cli:main"
+netops-eval = "evals.run_evals:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["agent", "mcp_servers", "probes"]

@@ -1,0 +1,16 @@
+{
+  "name": "gateway_down",
+  "description": "LAN gateway unreachable",
+  "input": {
+    "latency_results": [
+      {"target": "192.168.1.1", "packets_sent": 3, "packets_received": 0, "packet_loss_pct": 100}
+    ]
+  },
+  "expected": {
+    "overall_health": "down",
+    "incident_count": 1,
+    "categories": ["performance"],
+    "severities": ["critical"],
+    "root_cause_contains": ["unreachable"]
+  }
+}
